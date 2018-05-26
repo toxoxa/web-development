@@ -1,0 +1,102 @@
+body {
+    background-color: #edeef0;
+    margin: 0 !important;
+}
+.header {
+    display: flex;
+    height: 60px;
+    background-color: #4a76a8;
+    padding: 6px 20%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.header-item {
+    margin: 0 10px;
+    display: flex;
+    color: #bfcee0;
+    font-size: 28px;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+    cursor: pointer;
+}
+.header-item:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.header-item.chosen {
+    color: #ffffff;
+}
+.layout {
+    width: 60%;
+    margin: 0 20% 0 20%;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+}
+.blazon {
+    float: left;
+    margin: 0 20px 0 20px;
+}
+.blazon img {
+    width: 150px;
+}
+/*Gallery Page*/
+.gallery {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.gallery-item img {
+    cursor: pointer;
+    width: 120px;
+    margin: 3px;
+}
+.gallery-item {
+    border: 1px solid #edeef0;
+}
+.gallery-item:hover {
+    border: 1px solid #4a76a8;
+}
+.gallery-photo__big {
+    text-align: center;
+}
+.gallery-photo__big #imgBig {
+    border: 1px solid #4a76a8;
+    padding: 2px;
+    width: 450px;
+}
+/*Sights Page*/
+.sights-grid {
+    display: grid;
+    grid-template-columns: 15% 40% 45%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    border-bottom: 1px solid #4a76a8;
+    border-right: 1px solid #4a76a8;;
+}
+.sight-photo img {
+    width: 100px;
+    padding: 5px;
+}
+.sight-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sight-photo, .sight-title, .sight-description {
+    border-top: 1px solid #4a76a8;
+    border-left: 1px solid #4a76a8;
+}
+.sight-title, .sight-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sight-description {
+    padding: 5px;
+}
+.sight-title {
+    font-size: 20px;
+}
+.sight-title a {
+    text-decoration: none;
+    color: black;
+}
