@@ -33,7 +33,7 @@ body {
 }
 .layout-picture-left {
     float: left;
-    margin: 0 20px 0 20px;
+    margin-right: 20px
 }
 .blazon {
     width: 150px;
