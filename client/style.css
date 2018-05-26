@@ -31,11 +31,11 @@ body {
     margin: 0 20% 0 20%;
     font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
 }
-.blazon {
+.layout-picture-left {
     float: left;
     margin: 0 20px 0 20px;
 }
-.blazon img {
+.blazon {
     width: 150px;
 }
 /*Gallery Page*/
@@ -99,4 +99,22 @@ body {
 .sight-title a {
     text-decoration: none;
     color: black;
+}
+.sight-picture {
+    width: 300px;
+}
+/*Lake*/
+.lake-table {
+    margin: auto;
+    display: grid;
+    width: 500px;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    border: 1px solid #4a76a8;
+}
+.lake-table__name, .lake-table__value {
+    padding: 6px;
+}
+.lake-table__value {
+    border-left: 1px solid #4a76a8;
 }
