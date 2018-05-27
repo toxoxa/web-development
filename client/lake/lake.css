@@ -1,0 +1,14 @@
+.lake-table {
+    margin: auto;
+    display: grid;
+    width: 500px;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    border: 1px solid #4a76a8;
+}
+.lake-table__name, .lake-table__value {
+    padding: 6px;
+}
+.lake-table__value {
+    border-left: 1px solid #4a76a8;
+}

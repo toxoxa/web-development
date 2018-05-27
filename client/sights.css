@@ -1,0 +1,35 @@
+.sights-grid {
+    display: grid;
+    grid-template-columns: 15% 40% 45%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    border-bottom: 1px solid #4a76a8;
+    border-right: 1px solid #4a76a8;;
+}
+.sight-photo img {
+    width: 100px;
+    padding: 5px;
+}
+.sight-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sight-photo, .sight-title, .sight-description {
+    border-top: 1px solid #4a76a8;
+    border-left: 1px solid #4a76a8;
+}
+.sight-title, .sight-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sight-description {
+    padding: 5px;
+}
+.sight-title {
+    font-size: 20px;
+}
+.sight-title a {
+    text-decoration: none;
+    color: black;
+}

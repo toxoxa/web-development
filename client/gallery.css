@@ -1,0 +1,25 @@
+.gallery {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.gallery-item img {
+    cursor: pointer;
+    width: 120px;
+    margin: 3px;
+}
+.gallery-item {
+    border: 1px solid #edeef0;
+}
+.gallery-item:hover {
+    border: 1px solid #4a76a8;
+}
+.gallery-photo__big {
+    text-align: center;
+}
+.gallery-photo__big #imgBig {
+    border: 1px solid #4a76a8;
+    padding: 2px;
+    width: 450px;
+}
