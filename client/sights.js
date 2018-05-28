@@ -18,4 +18,41 @@ window.onload = () => {
     feedback.onclick = () => {
         document.location.href = 'feedback/feedback.html'
     };
+
+    function setSights(sights) {
+        let sightsObj = $('.sight-title span a');
+        sightsObj.each((i, obj) => {
+           obj.innerText = sights[i];
+        })
+
+    }
+    fetch('/api', {
+        method: 'post',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            'action': 'getSights'
+        })
+    }).then(res => {
+        console.log(`response: ${res.status} ${res.statusText}`);
+        res.json().then(sights => {
+            if (sights) {
+                setSights(sights)
+            } else {
+                console.log('NO SIGHTS');
+                setSights([
+                    "Никитский монастырь",
+                    "Спасо-Преображенский собор",
+                    "Синий камень",
+                    "Плещеево Озеро",
+                    "Железнодорожный музей"
+                ]);
+            }
+        })
+
+    }).catch(err => {
+        console.log(err);
+    });
 };

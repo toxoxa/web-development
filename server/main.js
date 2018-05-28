@@ -19,15 +19,28 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.post('/api', (req, res) => {
-    debugger;
-    if(req.body.action === 'feedback') {
-        client.set(req.body.name, req.body.comment, (err, repl) => {
-            if(err) {
-                console.log(err);
-            } else {
-                console.log('comment recorded');
-            }
-        });
-        res.send();
+    switch(req.body.action) {
+        case 'feedback':
+            client.set(req.body.name, req.body.comment, (err, repl) => {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log('comment recorded');
+                }
+            });
+            res.send();
+            break;
+        case 'getSights':
+            debugger;
+            client.get('sights', (err, repl) => {
+               if(err) {
+                   console.log(err);
+               } else if(repl) {
+                    res.send(repl);
+                } else {
+                   res.send('Key not found');
+               }
+            });
+            break;
     }
 });

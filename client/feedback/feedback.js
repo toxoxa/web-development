@@ -33,7 +33,7 @@ window.onload = () => {
             })
         }).then(res => {
             console.log(`response: ${res.status} ${res.statusText}`);
-        }).catch((err) => {
+        }).catch(err => {
             console.log(err);
         });
         nameTextBox.value = '';
