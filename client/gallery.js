@@ -5,7 +5,8 @@ window.onload = () => {
         gallery = $('.gallery')[0],
         headerIndex = $('.header-main')[0],
         headerSights = $('.header-sights')[0],
-        headerGallery = $('.header-gallery')[0];
+        headerGallery = $('.header-gallery')[0],
+        feedback = $('.feedback')[0];
 
     gallery.onclick = (e) => {
         if (e.target !== gallery) {
@@ -21,5 +22,8 @@ window.onload = () => {
     };
     headerGallery.onclick = () => {
         document.location.href = 'gallery.html'
+    };
+    feedback.onclick = () => {
+        document.location.href = 'feedback/feedback.html'
     };
 };
