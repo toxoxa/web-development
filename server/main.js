@@ -31,9 +31,8 @@ app.post('/api', (req, res) => {
             res.send();
             break;
         case 'getSights':
-            debugger;
             client.get('sights', (err, repl) => {
-               if(err) {
+               if (err) {
                    console.log(err);
                } else if(repl) {
                     res.send(repl);
@@ -42,5 +41,15 @@ app.post('/api', (req, res) => {
                }
             });
             break;
+        case 'getLakeMarkup':
+            client.get('lakeLayoutMarkup', (err, repl) => {
+                if (err) {
+                    console.log(err);
+                } else if (repl) {
+                    res.send(JSON.stringify(repl));
+                } else {
+                    res.send('Key not found');
+                }
+            });
     }
 });

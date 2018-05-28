@@ -17,4 +17,25 @@ window.onload = () => {
     feedback.onclick = () => {
         document.location.href = '../feedback/feedback.html'
     };
+
+    fetch('/api', {
+        method: 'post',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            'action': 'getLakeMarkup'
+        })
+    }).then(res => {
+        console.log(`response: ${res.status} ${res.statusText}`);
+        res.json().then(lakeMarkup => {
+            if (lakeMarkup) {
+                $('.layout')[0].innerHTML = lakeMarkup;
+            }
+        })
+
+    }).catch(err => {
+        console.log(err);
+    });
 };
