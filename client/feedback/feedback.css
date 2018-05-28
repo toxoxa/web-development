@@ -1,4 +1,32 @@
-.feedback {
+.feedback-form {
     display: flex;
+    margin: auto;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.name-textbox {
+    width: 300px;
+    resize: none;
+    margin: 5px 0;
+}
+.comment-textbox {
+    width: 300px;
+    resize: none;
+    margin: 5px 0;
+}
+.name-textbox, .feedback-label, .send-button {
+    margin: 10px 0;
+}
+.send-button {
+    border: 2px solid #4a76a8;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.send-button:hover {
+    background-color: #bfcee0;
+}
+.send-button:active {
+    background-color: #4a76a8;
 }

@@ -11,15 +11,23 @@ app.use(express.static('client'));
 
 app.listen(serverPort, () => console.log('Server start'));
 
-client.on('error', function(err) {
+client.on('error', err => {
     console.log(err);
 });
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/api', function(req, res) {
+app.post('/api', (req, res) => {
+    debugger;
     if(req.body.action === 'feedback') {
-        //TODO Записывать фидбек в редис
+        client.set(req.body.name, req.body.comment, (err, repl) => {
+            if(err) {
+                console.log(err);
+            } else {
+                console.log('comment recorded');
+            }
+        });
+        res.send();
     }
 });
